@@ -29,9 +29,10 @@ $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = '127.0.0.1';
-$cfg['Servers'][$i]['user'] = 'user4PF'; 
-$cfg['Servers'][$i]['password'] = 'vhx3gF1MGH8BpmWG';
+$cfg['Servers'][$i]['host'] = '10.128.0.207';
+$cfg['Servers'][$i]['port'] = '3306';
+$cfg['Servers'][$i]['user'] = 'root'; 
+$cfg['Servers'][$i]['password'] = 'EcGKUbxtRoPW2vM7';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 

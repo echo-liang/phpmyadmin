@@ -66,7 +66,7 @@ if (!empty($_ENV['PMA_HOST'])) {
     $ports = array($_ENV['PMA_PORT']);
 } elseif (!empty($_ENV['PMA_HOSTS'])) {
     $hosts = array_map('trim', explode(',', $_ENV['PMA_HOSTS']));
-    $verbose = array_map('trim', explode(',', $_ENV['PMA_VERBOSES']));
+    //$verbose = array_map('trim', explode(',', $_ENV['PMA_VERBOSES']));
     $ports = array_map('trim', explode(',', $_ENV['PMA_PORTS']));
 }
 if (!empty($_ENV['PMA_SOCKET'])) {

@@ -29,7 +29,8 @@ $vars = array(
     'PMA_SOCKET',
     'PMA_SOCKETS',
     'PMA_USER',
-    'PMA_PASSWORD',
+    'PMA_PASSWORD1',
+    'PMA_PASSWORD2',
     'PMA_ABSOLUTE_URI',
     'PMA_CONTROLHOST',
     'PMA_CONTROLPORT',
@@ -84,8 +85,8 @@ for ($i = 1; isset($hosts[$i - 1]); $i++) {
     }
     if (isset($_ENV['PMA_USER'])) {
         $cfg['Servers'][$i]['auth_type'] = 'config';
-        $cfg['Servers'][$i]['user'] = isset($_ENV['PMA_USER']) ? $_ENV['PMA_USER'] : 'root';
-        $cfg['Servers'][$i]['password'] = isset($_ENV['PMA_PASSWORD']) ? $_ENV['PMA_PASSWORD'] : '';
+        $cfg['Servers'][$i]['user'] = $_ENV['PMA_USER'];
+        $cfg['Servers'][$i]['password'] = isset($_ENV['PMA_PASSWORD{$i}']) ? $_ENV['PMA_PASSWORD{$i}'] : '';
     } else {
         $cfg['Servers'][$i]['auth_type'] = 'cookie';
     }

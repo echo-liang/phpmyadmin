@@ -9,13 +9,13 @@
  *
  * @package PhpMyAdmin
  */
-declare(strict_types=1);
+//declare(strict_types=1);
 
 /**
  * This is needed for cookie based authentication to encrypt password in
  * cookie. Needs to be 32 chars long.
  */
-//$cfg['blowfish_secret'] = ''; /* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
+/*$cfg['blowfish_secret'] = ''; *//* YOU MUST FILL IN THIS FOR COOKIE AUTH! */
 
 /* Ensure we got the environment */
 $vars = array(
@@ -90,6 +90,7 @@ for ($i = 1; isset($hosts[$i - 1]); $i++) {
     } else {
         $cfg['Servers'][$i]['auth_type'] = 'cookie';
     }
+    /*
     if (isset($_ENV['PMA_PMADB'])) {
       $cfg['Servers'][$i]['pmadb'] = $_ENV['PMA_PMADB'];
       $cfg['Servers'][$i]['relation'] = 'pma__relation';
@@ -126,16 +127,18 @@ for ($i = 1; isset($hosts[$i - 1]); $i++) {
     }
     $cfg['Servers'][$i]['compress'] = false;
     $cfg['Servers'][$i]['AllowNoPassword'] = true;
+    */
 }
+/*
 for ($i = 1; isset($sockets[$i - 1]); $i++) {
     $cfg['Servers'][$i]['socket'] = $sockets[$i - 1];
     $cfg['Servers'][$i]['host'] = 'localhost';
-}
+}*/
 /*
  * Revert back to last configured server to make
  * it easier in config.user.inc.php
  */
 $i--;
 /* Uploads setup */
-$cfg['UploadDir'] = '';
-$cfg['SaveDir'] = '';
+//$cfg['UploadDir'] = '';
+//$cfg['SaveDir'] = '';
